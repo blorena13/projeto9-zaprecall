@@ -1,0 +1,96 @@
+
+body {
+    background-color: #FB6B6B;
+    width: 375px;
+}
+
+.app {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashCards {
+    background-color: #FFFFFF;
+    width: 300px;
+    height: 65px;
+    margin-top: 51px;
+
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Recursive';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    font-style: normal;
+    color: #333333;
+}
+
+.flashCards img {
+    width: 20px;
+    height: 23px;
+    margin-right: 22px;
+}
+
+.flashCards p {
+    margin-left: 15px;
+}
+
+.logo img {
+    width: 52px;
+    height: 60px;
+}
+
+.logo {
+    background-color: aquamarine;
+    display: flex;
+    margin-top: 48px;
+    width: 100%;
+    justify-content: center;
+   
+    
+}
+
+.zap {
+    width: 203.17px;
+    
+    font-family: 'Righteous';
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44.7px;
+    color: #FFFFFF;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.concluidos {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+
+    font-family: 'Recursive';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.6px;
+    color: #333333;
+}

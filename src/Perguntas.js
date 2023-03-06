@@ -14,6 +14,7 @@ export default function Perguntas({
     mostrarPergunta,
     seta,
     contador,
+    setcontador,
 }) 
 {
     const [mostrarResposta, setMostrarResposta] = useState(false);
@@ -24,7 +25,7 @@ export default function Perguntas({
  
         return (
     <>
-    {mostrarResposta ? <Respostas contador={contador} index={index} erro={erro} certo={certo} quase={quase} answer={answer} setIcon={setIcon} mostrarPergunta={mostrarPergunta} mostrarResposta={setMostrarResposta} /> : <Pergunta  > 
+    {mostrarResposta ? <Respostas setcontador={setcontador} contador={contador} index={index} erro={erro} certo={certo} quase={quase} answer={answer} setIcon={setIcon} mostrarPergunta={mostrarPergunta} mostrarResposta={setMostrarResposta} /> : <Pergunta  > 
         <p data-test="flashcard-text">{question}</p> <img data-test="turn-btn" src={virar} 
                     onClick={() => {
                         virarResposta();

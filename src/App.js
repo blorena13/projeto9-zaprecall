@@ -9,17 +9,17 @@ import styled from "styled-components";
 function App() {
 
   const card = [
-    { question: "O que é JSX?", answer: "Uma extensão da linguagem JavaScript" },
-    { question: "O React é __", answer: "Uma biblioteca JavaScript para construção de interfaces" },
-    { question: "Componentes devem iniciar com __", answer: "Letra maiúscula" },
-    { question: "Podemos colocar __ dentro do JSX", answer: "expressões" },
-    { question: "O ReactDOM nos ajuda __", answer: "Interagindo com a DOM para colocar componentes React na mesma" },
-    { question: "Usamos o npm para __", answer: "Gerenciar os pacotes necessários e suas dependências" },
-    { question: "Usamos props para __", answer: "Passar diferentes informações para componentes" },
-    { question: "Usamos estado (state) para __", answer: "Dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }
+    { question: "Qual o nome completo de Taylor Swift?", answer: "Taylor Alison Swift" },
+    { question: "Qual dia é o aniversário da Taylor Swift?", answer: "13/12" },
+    { question: "Que o signo da Taylor Swift?", answer: "Sagitário" },
+    { question: "Qual a música da Taylor Swift foi feita para o Harry Styles?", answer: "Style" },
+    { question: "Que cantora brasileira Taylor Swift fez um feat?", answer: "Paula Fernandes" },
+    { question: "Qual o nome das gatas de estimação de Taylor Swift?", answer: "Meredith e Olívia" },
+    { question: "Qual o número da sorte de Taylor Swift?", answer: "13" },
+    { question: "Qual o nome do último álbum lançado pela Taylor Swift?", answer: "Midnights" }
 ]
 
-let contador = 0;
+const [contador, setContador] = useState(0)
 
 
   return (
@@ -30,7 +30,7 @@ let contador = 0;
         <p> ZapRecall </p>
         </Logo>
       
-      <Flashcards card={card} contador={contador}/>
+      <Flashcards card={card} contador={contador} setcontador={setContador}/>
       <Concluidos card={card} contador={contador}/>
       </Principal>
     </>

@@ -11,14 +11,14 @@ export default function Respostas(
         setIcon,
         index,
         contador,
+        setcontador,
     }){
         
 
         function voltar(){
             mostrarResposta(false);
             mostrarPergunta(false); 
-            contador = contador + 1;
-           
+            setcontador(contador +1);
         }
         
 

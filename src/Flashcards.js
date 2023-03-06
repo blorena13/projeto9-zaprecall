@@ -6,16 +6,9 @@ import Inicio from "./Inicio";
 
 
 
-export default function FlashCards({card, contador}) {
-
-    const [turn, setTurn] = useState([]);
-    const [botaoClicado, setBotaoClicado] = useState(false);
-    const [perguntaClicada, setPerguntaClicada] = useState(false);
-    const [virarClicada, setVirarClicada] = useState(false);
-    const [number, setNumber] = useState(0); //mudar nome da funçao
+export default function FlashCards({card, contador, setcontador}) {
 
     
-
     return (
         <>
 
@@ -25,6 +18,7 @@ export default function FlashCards({card, contador}) {
             question={item.question}
             answer={item.answer}
             contador={contador}
+            setcontador={setcontador}
             />
             )} 
 

@@ -7,7 +7,7 @@ import certo from "./assets/icone_certo.png";
 import quase from "./assets/icone_quase.png";
 
 
-export default function Inicio({index, question , answer, contador}) {
+export default function Inicio({index, question , answer, contador, setcontador}) {
     
     
     const [mostrarPergunta, setMostrarPergunta] = useState(false);
@@ -20,7 +20,7 @@ export default function Inicio({index, question , answer, contador}) {
 
     return (
         <>
-        {mostrarPergunta ? (<Perguntas  contador={contador} index={index} question={question} answer={answer} erro={erro} certo={certo} quase={quase} setIcon={setIcon} mostrarPergunta={setMostrarPergunta} />) : (<CadaCard icon={icon} erro={erro} certo={certo} quase={quase} data-test="flashcard" key={index}  > 
+        {mostrarPergunta ? (<Perguntas setcontador={setcontador} contador={contador} index={index} question={question} answer={answer} erro={erro} certo={certo} quase={quase} setIcon={setIcon} mostrarPergunta={setMostrarPergunta} />) : (<CadaCard icon={icon} erro={erro} certo={certo} quase={quase} data-test="flashcard" key={index}  > 
             <p data-test="flashcard-text" >{`Pergunta ${index + 1}` }</p>
             <img data-test={ icon === erro ? 'no-icon' : icon === certo ? 'zap-icon' : icon === quase ? 'partial-icon' :  'play-btn'} src={icon} 
                 onClick={() => {

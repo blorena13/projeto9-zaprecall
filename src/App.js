@@ -10,8 +10,8 @@ function App() {
 
   const card = [
     { question: "Qual o nome completo de Taylor Swift?", answer: "Taylor Alison Swift" },
-    { question: "Qual dia é o aniversário da Taylor Swift?", answer: "13/12" },
-    { question: "Que o signo da Taylor Swift?", answer: "Sagitário" },
+    { question: "Que dia é o aniversário da Taylor Swift?", answer: "13/12" },
+    { question: "Qual o signo da Taylor Swift?", answer: "Sagitário" },
     { question: "Qual a música da Taylor Swift foi feita para o Harry Styles?", answer: "Style" },
     { question: "Que cantora brasileira Taylor Swift fez um feat?", answer: "Paula Fernandes" },
     { question: "Qual o nome das gatas de estimação de Taylor Swift?", answer: "Meredith e Olívia" },

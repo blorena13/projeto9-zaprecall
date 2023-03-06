@@ -14,7 +14,7 @@ const card = [
 ]
 
 
-export default function FlashCards({icon, certo, erro, quase , setIcon}) {
+export default function FlashCards({ certo, erro, quase }) {
 
     const [turn, setTurn] = useState([]);
     const [botaoClicado, setBotaoClicado] = useState(false);
@@ -24,14 +24,6 @@ export default function FlashCards({icon, certo, erro, quase , setIcon}) {
 
     
 
-
-    function Teste(test) {
-
-
-    }
-
-    console.log(Teste)
-
     return (
         <>
 
@@ -40,11 +32,9 @@ export default function FlashCards({icon, certo, erro, quase , setIcon}) {
             key={index} 
             question={item.question}
             answer={item.answer}
-            icon = {icon}
             certo={certo}
             erro={erro}
             quase={quase}
-            setIcon={setIcon}
             
             />
             )} 

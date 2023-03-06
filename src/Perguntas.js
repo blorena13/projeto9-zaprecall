@@ -12,6 +12,7 @@ export default function Perguntas({
     quase,
     setIcon,
     mostrarPergunta,
+    seta,
 }) 
 {
     const [mostrarResposta, setMostrarResposta] = useState(false);

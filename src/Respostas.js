@@ -1,15 +1,16 @@
 import styled from "styled-components";
+import {useState} from "react";
 
 export default function Respostas(
     {answer, 
         erro, 
         certo, 
         quase , 
-        setIcon,
         mostrarResposta,
         mostrarPergunta,
+        setIcon,
     }){
-
+        
 
         function voltar(){
             mostrarResposta(false);
@@ -21,7 +22,7 @@ export default function Respostas(
         <Resposta  >
                         <p data-test="flashcard-text"> {answer}</p>
                         <Opcoes>
-                            <Nao data-test="no-btn" onClick={ () => {voltar(); setIcon(erro)}}>Não <br></br> lembrei</Nao>
+                            <Nao data-test="no-btn" onClick={() => {voltar(); setIcon(erro)}}>Não <br></br> lembrei</Nao>
                             <Quase data-test="partial-btn" onClick={() => { voltar(); setIcon(quase)}}>Quase não lembrei</Quase>
                             <Lembrei data-test="zap-btn" onClick={() => {voltar(); setIcon(certo)}}>Zap!</Lembrei>
                         </Opcoes>
@@ -72,6 +73,7 @@ const Resposta = styled.div`
     align-items: center;
     text-align: center;
     margin-right: 7.74px;
+    cursor: pointer;
 `
 
     const Quase = styled.div`
@@ -87,6 +89,7 @@ const Resposta = styled.div`
     align-items: center;
     text-align: center;
     margin-right: 7.74px;
+    cursor: pointer;
 `
 
     const Lembrei = styled.div`
@@ -100,5 +103,6 @@ const Resposta = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
 `

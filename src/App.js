@@ -4,13 +4,12 @@ import Flashcards from "./Flashcards";
 import Concluidos from "./Concluidos";
 import raio from "./assets/logo.png";
 import styled from "styled-components";
-import seta from "./assets/seta_play.png";
 import erro from "./assets/icone_erro.png";
 import certo from "./assets/icone_certo.png";
 import quase from "./assets/icone_quase.png";
 
 function App() {
- const [icon, setIcon] = useState(seta);
+ 
 
   return (
     <>
@@ -20,7 +19,7 @@ function App() {
         <p> ZapRecall </p>
         </Logo>
       
-      <Flashcards icon={icon} erro={erro} certo={certo} quase={quase} setIcon={setIcon}/>
+      <Flashcards erro={erro} certo={certo} quase={quase} />
       <Concluidos />
       </Principal>
     </>

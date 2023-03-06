@@ -9,13 +9,18 @@ export default function Respostas(
         mostrarResposta,
         mostrarPergunta,
         setIcon,
+        index,
+        contador,
     }){
         
 
         function voltar(){
             mostrarResposta(false);
             mostrarPergunta(false); 
+            contador = contador + 1;
+           
         }
+        
 
     return(
         <>

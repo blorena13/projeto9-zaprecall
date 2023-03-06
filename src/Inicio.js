@@ -2,15 +2,16 @@ import { useState } from "react";
 import styled from "styled-components";
 import Perguntas from "./Perguntas";
 import seta from "./assets/seta_play.png";
+import erro from "./assets/icone_erro.png";
+import certo from "./assets/icone_certo.png";
+import quase from "./assets/icone_quase.png";
 
 
-export default function Testando({index, question , answer , erro, certo, quase,}) {
+export default function Inicio({index, question , answer, contador}) {
     
-    const [mostrarInicio, setMostrarInicio] = useState();
+    
     const [mostrarPergunta, setMostrarPergunta] = useState(false);
     const [icon, setIcon] = useState(seta);
-
-    console.log(icon)
     
 
     function virarPerguntar(){
@@ -19,7 +20,7 @@ export default function Testando({index, question , answer , erro, certo, quase,
 
     return (
         <>
-        {mostrarPergunta ? (<Perguntas index={index} question={question} answer={answer} erro={erro} certo={certo} quase={quase} setIcon={setIcon} mostrarPergunta={setMostrarPergunta} />) : (<CadaCard data-test="flashcard" key={index}  > 
+        {mostrarPergunta ? (<Perguntas  contador={contador} index={index} question={question} answer={answer} erro={erro} certo={certo} quase={quase} setIcon={setIcon} mostrarPergunta={setMostrarPergunta} />) : (<CadaCard icon={icon} erro={erro} certo={certo} quase={quase} data-test="flashcard" key={index}  > 
             <p data-test="flashcard-text" >{`Pergunta ${index + 1}` }</p>
             <img data-test={ icon === erro ? 'no-icon' : icon === certo ? 'zap-icon' : icon === quase ? 'partial-icon' :  'play-btn'} src={icon} 
                 onClick={() => {

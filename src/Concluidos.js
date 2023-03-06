@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export default function Concluidos(){
+export default function Concluidos({card, contador}){
+    
+    const final = card.length
+    
+    
     return (
         <>
-        <Concluido data-test="footer"> 0/4 CONCLUÍDOS </Concluido>
+        <Concluido data-test="footer"> {contador}/{final} CONCLUÍDOS </Concluido>
         </>
     )
 }
